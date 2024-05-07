@@ -1,0 +1,8 @@
+namespace: foundation
+resources:
+  - namespace.yaml
+  - operator-group.yaml
+  - amq-streams.yaml
+  - logging.yaml
+  - rhsso.yaml
+  - service-registry.yaml

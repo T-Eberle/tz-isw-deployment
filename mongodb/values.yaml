@@ -1,0 +1,5 @@
+auth:
+  rootPassword: secretpassword
+  username: user
+  password: password
+  database: isw

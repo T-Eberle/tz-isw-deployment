@@ -1,0 +1,6 @@
+env:
+  secret:
+    BASIC_AUTH_USER: user
+    BASIC_AUTH_PASS: password
+persistence:
+  storageClass: ocs-storagecluster-ceph-rbd
