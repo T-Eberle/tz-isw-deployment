@@ -1,0 +1,23 @@
+apiVersion: registry.apicur.io/v1
+kind: ApicurioRegistry
+metadata:
+  name: apicurio
+spec:
+  configuration:
+    persistence: sql
+    security:
+      keycloak:
+        apiClientId: registry-api
+        realm: foundation
+        uiClientId: apicurio-registry
+        url: 'https://auth.#CLUSTER_CLOUD/auth'
+    sql:
+      dataSource:
+        password: myPassword
+        url: >-
+          jdbc:postgresql://postgresql.foundation.svc.cluster.local:5432/apicurio
+        userName: userJ2T
+    ui:
+      readOnly: false
+  deployment:
+    host: schema-registry.#CLUSTER_CLOUD

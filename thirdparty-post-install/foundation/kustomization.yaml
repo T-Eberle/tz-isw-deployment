@@ -1,0 +1,6 @@
+namespace: foundation
+resources:
+  - keycloak.yaml
+  - kafka.yaml
+  - kafka-user.yaml
+  - apicurio.yaml

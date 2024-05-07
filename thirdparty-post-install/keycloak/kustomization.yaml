@@ -1,3 +1,0 @@
-namespace: foundation
-resources:
-  - keycloak.yaml

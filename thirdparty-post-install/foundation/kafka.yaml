@@ -1,0 +1,33 @@
+apiVersion: kafka.strimzi.io/v1beta1
+kind: Kafka
+metadata:
+  name: kafka
+spec:
+  kafka:
+    replicas: 3
+    listeners:
+      - authentication:
+          type: scram-sha-512
+        name: scram
+        port: 9092
+        tls: true
+        type: route
+      - authentication:
+          type: scram-sha-512
+        name: tls
+        port: 9093
+        tls: true
+        type: internal
+    config:
+      offsets.topic.replication.factor: 3
+      transaction.state.log.replication.factor: 3
+      transaction.state.log.min.isr: 2
+    storage:
+      type: ephemeral
+  zookeeper:
+    replicas: 3
+    storage:
+      type: ephemeral
+  entityOperator:
+    topicOperator: {}
+    userOperator: {}
