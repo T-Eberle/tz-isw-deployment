@@ -4,3 +4,5 @@ env:
     BASIC_AUTH_PASS: password
 persistence:
   storageClass: ocs-storagecluster-ceph-rbd
+securityContext:
+  enabled: false
