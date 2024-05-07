@@ -3,3 +3,7 @@ auth:
   username: user
   password: password
   database: isw
+global:
+  storageClass: ocs-storagecluster-ceph-rbd
+securityContext:
+  enabled: false

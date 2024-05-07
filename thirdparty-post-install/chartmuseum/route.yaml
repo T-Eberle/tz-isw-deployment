@@ -2,9 +2,7 @@ kind: Route
 apiVersion: route.openshift.io/v1
 metadata:
   name: chartmuseum
-  namespace: chartmuseum
 spec:
-  host: chartmuseum.<YOUR_HOST_DOMAIN>
   to:
     kind: Service
     name: chartmuseum
